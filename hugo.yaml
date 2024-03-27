@@ -1,41 +1,57 @@
 baseURL: "/"
 
-title: Familie Kienzler
+title: "Familie Kienzler"
+
 languageCode: de-de
 DefaultContentLanguage: de
 enableEmoji: true
 enableGitInfo: false
 enableRobotsTXT: true
 canonifyURLs: false
+enableInlineShortcodes: true
 paginate: 9
 darkmode_js:
   - assets/js/darkmode.js
-enableInlineShortcodes: true
 
 params:
   author: Andreas Kienzler
+
+  # dieses Bild kommt aus assets/images
   authorimage: ../assets/images/global/author.webp
+
+  # dieses Bild kommt aus static/images
   og_image: images/tailbliss-cover.png
+
+  # Text auf der Wilkommens-Seite
   moto: "Herzlich Willkommen auf der Homepage der Familie Kienzler!"
   description: "Wir wünschen Ihnen viel Vergnügen auf unseren Seiten!"
-  disable_theme_toggle: false
-  disable_stay_uptodate: true
 
+  # deaktiviert das dark-theme
+  disable_theme_toggle: false
+
+  # Text-Block
   p1:
+    enabled: true
     heading: ""
-    image: "images/pages/our-mission.png"
+    # dieses blöde Bild kommt aus assets/images
+    image: "images/tailbliss-cover.png"
     content:
       - text: "(...) Und der kleine Prinz kam zum Fuchs zurück: \"Adieu\", sagte er. \"Adieu\" sagte der Fuchs. \"Hier mein Geheimnis. Es ist ganz einfach: Man sieht nur mit dem Herzen gut. Das Wesentliche ist für die Augen unsichtbar.\" "
       - text: "\"Das Wesentliche ist für die Augen unsichtbar\" wiederholte der kleine Prinz, um es sich zu merken. (...) \"Die Menschen haben diese Wahrheit vergessen\" sagte der Fuchs. \"Aber du darfst sie nicht vergessen.\""
       - text: "aus \"Der kleine Prinz\""
       - text: "Antoine de Saint-Exupéry"
 
+  # 1. Zusätzlicher Text-Block
   p2:
+    enabled: false
     heading: "Just in time for Hacktoberfest with JIT Tailwind."
     image: "images/pages/hacktoberfest.jpg"
     content:
       - text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at purus non enim commodo tincidunt vel in nulla. Aenean pretium dolor non ultricies bibendum. Etiam quis blandit enim. Nunc condimentum ut lorem in faucibus. Phasellus varius ligula et commodo tristique. Nunc sodales nisl nec laoreet vehicula. Donec velit nibh, sollicitudin at nulla a, egestas dignissim eros. Sed lacinia hendrerit interdum. Vestibulum pellentesque sem venenatis nisl tempor accumsan sit amet tempus felis. Mauris leo diam, porttitor nec bibendum id, tempus ac nulla. Etiam congue ornare erat at convallis. Donec in nisi dapibus, mattis risus vel, imperdiet enim. Donec fermentum sit amet tortor nec tincidunt. Nam nec lectus tortor. Nunc sit amet laoreet orci, porta ornare massa. Phasellus eget lorem mi. Nam eleifend ultricies sapien, quis mollis leo bibendum at. Quisque viverra lorem sit amet magna aliquet, et dignissim arcu eleifend."
+
+  # 2. Zusätzlicher Text-Block
   p3:
+    enabled: false
     heading: "Backed by world-renowned investors"
     content:
       - text: "Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae."
@@ -44,6 +60,7 @@ params:
         url: "#"
     logos:
       - identifier: a
+        # Dieses Bild kommt aus assets/images
         image: "images/global/sample-logo.svg"
         alt: "a"
       - identifier: b
@@ -51,11 +68,17 @@ params:
       - identifier: d
       - identifier: e
       - identifier: f
+
+  # Zeigt die 3 zu letzt geänderten seiten
   p4:
-    heading: "From the blog"
+    enabled: false
+    heading: "Neues"
     content:
       - text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed."
+
+  # E-Mail newsletter page - einfach nein...
   p5:
+    enabled: false
     heading: "Stay Up to Date"
     content:
       - text: "Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque."
@@ -65,18 +88,15 @@ params:
     button: "Notify me"
 
   social_media:
-    github:
-      enabled: false
-      url: 'https://github.com/nusserstudios'
-    facebook:
-      enabled: false
-      url: 'https://facebook.com/nusserstudios'
-    instagram:
-      enabled: true
-      url: 'https://instagram.com/nusserstudios'
-    twitter:
-      enabled: false
-      url: '@nusserstudios'
+    - title: "Karin"
+      url: "https://instagram.com/karinkie28"
+      type: instagram
+      path: "M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+
+    - title: "Andreas"
+      url: "https://instagram.com/karinkie28"
+      type: instagram
+      path: "M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
 
 menu:
   main:
