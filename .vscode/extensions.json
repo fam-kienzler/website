@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "ms-azuretools.vscode-docker",
+        "davidanson.vscode-markdownlint",
+        "shardulm94.trailing-spaces",
+        "github.vscode-pull-request-github",
+        "eamodio.gitlens",
+        "rusnasonov.vscode-hugo",
+        "streetsidesoftware.code-spell-checker"
+    ]
+}
