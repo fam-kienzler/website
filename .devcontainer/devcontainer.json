@@ -20,7 +20,9 @@
                 "git.autofetch": true,
                 "editor.renderFinalNewline": "on",
                 "editor.codeLens": true,
-                "editor.formatOnSave": false
+                "editor.formatOnSave": false,
+                "gitlens.showWelcomeOnInstall": false,
+                "gitlens.showWhatsNewAfterUpgrades": false,
             },
             "extensions": [
                 "ms-azuretools.vscode-docker",
